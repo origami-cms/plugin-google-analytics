@@ -1,6 +1,6 @@
 {
   "name": "origami-plugin-google-analytics",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "Google Analytics plugin for Origami",
   "main": "dist/index.js",
   "repository": "https://github.com/origami-cms/plugin-google-analytics",
