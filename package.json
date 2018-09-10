@@ -1,0 +1,21 @@
+{
+  "name": "origami-plugin-google-analytics",
+  "version": "0.0.1",
+  "description": "Google Analytics plugin for Origami",
+  "main": "dist/index.js",
+  "repository": "https://github.com/origami-cms/plugin-google-analytics",
+  "author": "Tristan Matthias <hello@tristanmatthias.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "origami-core-server": "^0.5.2",
+    "tslint": "^5.11.0",
+    "tslint-config-origami": "^1.0.3",
+    "typescript": "^3.0.3"
+  },
+  "dependencies": {
+    "origami-core-lib": "^0.3.13"
+  }
+}
