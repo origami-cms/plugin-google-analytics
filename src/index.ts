@@ -37,11 +37,12 @@ export default (server: Server, options: GAPluginOptions) => {
 
   const r = new Route('*');
   r.position('pre-send').get((req, res, next) => {
+
     if (res.headersSent || !res.locals.content.hasContent) {
       next();
       return;
     }
-    let content = res.locals.content.get();
+    const content = res.locals.content.get();
 
     if (typeof content !== 'string') {
       next();
@@ -55,7 +56,7 @@ export default (server: Server, options: GAPluginOptions) => {
       content.match(/^\s*<\s*(html|HTML)\s+/gm)
     ) {
       // Replaces </head> with GA code + </head>
-      content = content.replace(/<\/head>/gm, template);
+      res.locals.content.override(content.replace(/<\/head>/gm, template));
     }
 
     next();
